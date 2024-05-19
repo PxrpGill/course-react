@@ -1,0 +1,17 @@
+* {
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --primary-main: #E3E2DF;
+    --primary-main-blacker: #bdbdbd;
+    --primary-blocks: #9A1750;
+    --primary-blocks-lighter: #c21c64;
+    --primary-titles: #EE4C7C;
+    --primary-titles-lighter: #fb2968;
+}
+
+body {
+    background-color: var(--primary-main);
+}

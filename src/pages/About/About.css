@@ -1,0 +1,27 @@
+.mini-information__title--visually-hidden {
+    display: none;
+    position: absolute;
+}
+
+.hello-section__title {
+    margin-bottom: 20px;
+}
+
+p {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.main-about__about-container {
+    width: 50%;
+}
+
+.list__item-des {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.main-about {
+    margin-top: 20px;
+    margin-bottom: 75px;
+}
