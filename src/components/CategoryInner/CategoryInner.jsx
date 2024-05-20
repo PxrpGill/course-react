@@ -4,6 +4,7 @@ import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import CategorySidebar from "../CategorySidebar/CategorySidebar";
 import CategoryInnerContent from "../CategoryInnerContent/CategoryInnerContent";
+import CategoryNavigation from "../CategoryNavigation/CategoryNavigation";
 
 import "./CategoryInner.css";
 
@@ -22,9 +23,6 @@ export default class CategoryInner extends React.Component {
     const title = category.title;
     const products = category.products;
 
-    console.log(title);
-    console.log(products);
-
     if (!category) {
       return <div>Категория не найдена!</div>
     }
@@ -34,23 +32,10 @@ export default class CategoryInner extends React.Component {
         <Header />
         <main className="category__main">
           <div className="category__container">
-            <nav className="category__navigation">
-              <ul className="navigation__list">
-                <li className="list_item-navigation">
-                  <a href={"/"} className="item-navigation__link">
-                    Главная
-                  </a>
-                </li>
-                <li className="list_item-navigation">
-                  <a href="" className="item-navigation__link">
-                    
-                  </a>
-                </li>
-              </ul>
-            </nav>
+            <CategoryNavigation title={title}/>
             <div className="category__main-content">
               <CategorySidebar />
-              <CategoryInnerContent items={category} />
+              <CategoryInnerContent items={products} />
             </div>
           </div>
         </main>

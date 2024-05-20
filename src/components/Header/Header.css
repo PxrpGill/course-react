@@ -21,6 +21,10 @@
     transition: .3s;
 }
 
+.header__title {
+    color: var(--primary-main)
+}
+
 .item__link:hover {
     color: var(--primary-main-blacker);
     transition: .3s;

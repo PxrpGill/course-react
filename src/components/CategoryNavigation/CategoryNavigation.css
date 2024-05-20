@@ -1,0 +1,26 @@
+.category__navigation {
+    display: flex;
+    background-color: var(--primary-blocks);
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px 0px 10px 0px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 8px black;
+}
+
+.list__item-navigation {
+    display: inline;
+    margin: 0px 10px 0px 10px;
+}
+
+.item-navigation__link {
+    color: var(--primary-main);
+    text-decoration: none;
+    font-size: 20px;
+    transition: .3s;
+}
+
+.item-navigation__link:hover {
+    color: var(--primary-main-blacker);
+    transition: .3s;
+}
