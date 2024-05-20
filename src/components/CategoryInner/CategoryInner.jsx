@@ -13,8 +13,25 @@ export default class CategoryInner extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-
+      sortOrder: 'asc',
     }
+  }
+
+  handleSortChange = (order) => {
+    this.setState({ sortOrder: order });
+  }
+
+  getSortedProducts(products) {
+    const { sortOrder } = this.state;
+    const productsArray = Object.values(products); 
+    const sortedProducts = productsArray.sort((a, b) => {
+      if (sortOrder === 'asc') {
+        return a.price - b.price;
+      } else {
+        return b.price - a.price;
+      }
+    });
+    return sortedProducts;
   }
 
   render() {
@@ -22,6 +39,8 @@ export default class CategoryInner extends React.Component {
     const category = categories[categoryId];
     const title = category.title;
     const products = category.products;
+
+    const sortedProducts = this.getSortedProducts(products);
 
     if (!category) {
       return <div>Категория не найдена!</div>
@@ -32,10 +51,10 @@ export default class CategoryInner extends React.Component {
         <Header />
         <main className="category__main">
           <div className="category__container">
-            <CategoryNavigation title={title}/>
+            <CategoryNavigation title={title} />
             <div className="category__main-content">
-              <CategorySidebar />
-              <CategoryInnerContent items={products} />
+              <CategorySidebar onSortChange={this.handleSortChange}/>
+              <CategoryInnerContent items={sortedProducts} />
             </div>
           </div>
         </main>

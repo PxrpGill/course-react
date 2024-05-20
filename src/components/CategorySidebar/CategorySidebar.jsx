@@ -24,8 +24,16 @@ export default class CategorySidebar extends React.Component {
             <h4 className="sort-by-price__title--visually-hidden">
               Сортировать от дешевого к дорогому и наоборот
             </h4>
-            <button className="sort-by-price__sort-button" type="button">Сначала дешевые</button>
-            <button className="sort-by-price__sort-button" type="button">Сначала дорогие</button>
+            <button className="sort-by-price__sort-button"
+              onClick={() => this.props.onSortChange('asc')}
+              type="button">
+              Сначала дешевые
+            </button>
+            <button className="sort-by-price__sort-button"
+              onClick={() => this.props.onSortChange('desc')}
+              type="button">
+              Сначала дорогие
+            </button>
           </article>
         </section>
       </aside>

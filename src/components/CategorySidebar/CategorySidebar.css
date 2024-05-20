@@ -1,5 +1,5 @@
 .category__sidebar {
-    background-color: var(--primary-titles);
+    background-color: #ffffff;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -18,7 +18,7 @@
 }
 
 .title__inner-sidebar {
-    color: var(--primary-main);
+    color: var(--primary-blocks);
 }
 
 .sort-by-price__title--visually-hidden {
@@ -33,7 +33,7 @@
 
 .sort-by-price__sort-button {
     margin: 10px 0px 10px 0px;
-    padding: 10px 40px;
+    padding: 10px 30px;
     background-color: var(--primary-blocks);
     color: white;
     border: none;

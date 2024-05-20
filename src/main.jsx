@@ -10,6 +10,7 @@ import {
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import Category from './pages/Category/Category';
+import Cart from './pages/Cart/Cart';
 
 import categories from "./assets/cateogories"
 
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
   {
     path: "/category/:categoryId",
     element: <Category categories={categories} />
+  },
+  {
+    path: "/cart",
+    element: <Cart />
   }
 ])
 

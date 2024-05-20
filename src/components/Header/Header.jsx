@@ -20,7 +20,7 @@ export default function Header() {
               </a>
             </li>
             <li className="list__item">
-              <a href="" className="item__link">
+              <a href={"/cart"} className="item__link">
                 Корзина
               </a>
             </li>

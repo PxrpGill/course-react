@@ -41,6 +41,7 @@ export default class CategoryInnerContent extends React.Component {
                     Описание:<br />{item.description}
                   </p>
                   <p className="main-content__item-rating">Рейтинг: {item.rating}</p>
+                  <p className="main-content__item-rating">Цена: {item.price}</p>
                   <button className="main-content__buy-button" type="button">
                     В корзину
                   </button>

@@ -4,14 +4,14 @@
 }
 
 :root {
-    --primary-main: #E3E2DF;
+    --primary-main: #ffffff;
     --primary-main-blacker: #bdbdbd;
-    --primary-blocks: #9A1750;
-    --primary-blocks-lighter: #c21c64;
-    --primary-titles: #EE4C7C;
-    --primary-titles-lighter: #fb2968;
+    --primary-blocks: #3043c4;
+    --primary-blocks-lighter: #5a6ce5;
+    --primary-titles: #ffffff;
+    --primary-titles-lighter: #9eafe7;
 }
 
 body {
-    background-color: var(--primary-main);
+    background-color: rgb(255, 255, 255);
 }
