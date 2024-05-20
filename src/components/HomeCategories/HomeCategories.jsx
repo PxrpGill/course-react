@@ -1,6 +1,7 @@
 import React from "react";
 
 import "./HomeCategories.css";
+import { Link } from "react-router-dom";
 
 
 export default class HomeCategories extends React.Component {
@@ -14,7 +15,7 @@ export default class HomeCategories extends React.Component {
     return (
       <section className="main__content">
         <div className="content__title">
-          <h2 className="content__inner">Товары</h2>
+          <h2 className="content__inner">Категории</h2>
         </div>
         <div className="content__content-items">
           {categoriesArray.map((elem, index) => {
@@ -26,7 +27,7 @@ export default class HomeCategories extends React.Component {
                 <img src={elem.img ? elem.img : "#"}
                   alt="Картинка категории"
                   className="item__image" />
-                <a href="#" className="item__link">Смотреть</a>
+                <Link to={`/category/${index}`} className="item__link">Смотреть</Link>
               </article>
             )
           })}

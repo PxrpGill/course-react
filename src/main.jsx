@@ -9,6 +9,10 @@ import {
 
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
+import Category from './pages/Category/Category';
+
+import categories from "./assets/cateogories"
+
 
 
 const router = createBrowserRouter([
@@ -19,6 +23,10 @@ const router = createBrowserRouter([
   {
     path: "/about",
     element: <About />
+  },
+  {
+    path: "/category/:categoryId",
+    element: <Category categories={categories} />
   }
 ])
 
