@@ -1,43 +1,39 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
+// src/index.js
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import "./style.css";
-import {
-  createBrowserRouter,
-  RouterProvider
-} from 'react-router-dom';
-
+import './style.css';
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import Category from './pages/Category/Category';
 import Cart from './pages/Cart/Cart';
-
-import categories from "./assets/cateogories"
-
-
+import { CartProvider } from './components/CartContext/CartContext';
+import categories from './assets/cateogories';
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <Home />
+    path: '/',
+    element: <Home />,
   },
   {
-    path: "/about",
-    element: <About />
+    path: '/about',
+    element: <About />,
   },
   {
-    path: "/category/:categoryId",
-    element: <Category categories={categories} />
+    path: '/category/:categoryId',
+    element: <Category categories={categories} />,
   },
   {
-    path: "/cart",
-    element: <Cart />
-  }
-])
-
+    path: '/cart',
+    element: <Cart />,
+  },
+]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>,
-)
+    <CartProvider>
+      <RouterProvider router={router} />
+    </CartProvider>
+  </React.StrictMode>
+);

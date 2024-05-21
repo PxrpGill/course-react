@@ -1,15 +1,20 @@
 import React from "react";
 
+import { CartContext } from "../CartContext/CartContext";
+
 import "./CategoryInnerContent.css";
 
 
 export default class CategoryInnerContent extends React.Component {
+  static contextType = CartContext;
+
   constructor(props) {
     super(props);
   }
 
   render() {
     const itemsArray = Object.values(this.props.items);
+    const { addToCart } = this.context;
 
     return (
       <section className="category__content">
@@ -42,7 +47,7 @@ export default class CategoryInnerContent extends React.Component {
                   </p>
                   <p className="main-content__item-rating">Рейтинг: {item.rating}</p>
                   <p className="main-content__item-rating">Цена: {item.price}</p>
-                  <button className="main-content__buy-button" type="button">
+                  <button className="main-content__buy-button" type="button" onClick={() => addToCart(item)}>
                     В корзину
                   </button>
                 </section>
